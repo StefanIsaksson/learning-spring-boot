@@ -3,6 +3,7 @@ package com.science.geology.controller;
 import com.science.geology.repository.RockRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class RockController {
 
     @RequestMapping(value = "rocks", method = RequestMethod.GET)
     public List<Rock> list() {
-        return rockRepository.findAll();
+        return rockRepository.findAll( new Sort(Sort.Direction.ASC, "id"));
     }
 
 
