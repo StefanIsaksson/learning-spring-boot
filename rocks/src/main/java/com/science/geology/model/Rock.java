@@ -7,7 +7,7 @@ public class Rock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long uniquekey;
+    Long id;
 
     String name;
 
@@ -33,8 +33,8 @@ public class Rock {
 
     public Rock() {};
 
-    public Rock(Long uniquekey, String name, String rockType, String visualDescription, String pictureUrl, String rockFormation, String mineralComposition, String location, Integer mohsScale) {
-        this.uniquekey = uniquekey;
+    public Rock(Long id, String name, String rockType, String visualDescription, String pictureUrl, String rockFormation, String mineralComposition, String location, Integer mohsScale) {
+        this.id = id;
         this.name = name;
         this.rockType = rockType;
         this.visualDescription = visualDescription;
@@ -45,12 +45,12 @@ public class Rock {
         this.mohsScale = mohsScale;
     }
 
-    public Long getUniquekey() {
-        return uniquekey;
+    public Long getId() {
+        return id;
     }
 
-    public void setUniquekey(Long uniquekey) {
-        this.uniquekey = uniquekey;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -1,5 +1,5 @@
 CREATE TABLE ROCK(
-                        	UNIQUEKEY INT AUTO_INCREMENT,
+                        	ID INT AUTO_INCREMENT,
                         	NAME VARCHAR(255),
                         	ROCK_TYPE VARCHAR(50),
                         	VISUAL_DESCRIPTION VARCHAR(2000),

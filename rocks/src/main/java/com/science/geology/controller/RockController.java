@@ -5,8 +5,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,7 +40,7 @@ public class RockController {
         if(optionalRock.isPresent()){
             Rock existingRock = optionalRock.get();
             BeanUtils.copyProperties(rock, existingRock);
-            existingRock.setUniquekey(id);
+            existingRock.setId(id);
             return rockRepository.saveAndFlush(existingRock);
         } else {
             return null; //TODO: Return some error message saying rock not found.
