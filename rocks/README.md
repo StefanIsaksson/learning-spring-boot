@@ -65,6 +65,6 @@ Currently only a few rocks have been added. Those which exist are marked with (I
 - gypsum
 - greywacke
 - mudstone
-- shale
+- shale (included)
 - siltstone
 - turbidite

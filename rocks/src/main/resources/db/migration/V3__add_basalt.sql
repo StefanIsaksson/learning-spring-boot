@@ -1,6 +1,6 @@
 INSERT INTO rock(name, rock_type, VISUAL_DESCRIPTION, PICTURE_URL, ROCK_FORMATION, MINERAL_COMPOSITION, LOCATION, mohs_scale)
             VALUES(
-                        'basalt',
+                        'Basalt',
                         'IGNEOUS_ROCKS',
                         'Dark-colored (usually black) and fine-grained',
                         'https://geology.com/rocks/pictures/basalt-380.jpg',

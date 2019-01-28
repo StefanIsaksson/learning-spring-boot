@@ -1,6 +1,6 @@
 INSERT INTO rock(name, rock_type, VISUAL_DESCRIPTION, PICTURE_URL, ROCK_FORMATION, MINERAL_COMPOSITION, LOCATION, mohs_scale)
             VALUES(
-                        'granite',
+                        'Granite',
                         'IGNEOUS_ROCKS',
                         'Microstructures of its crystals are large enough to be seen with the unaided eye. Predominantly white, pink, or gray in color, depending on their mineralogy',
                         'https://geology.com/rocks/pictures/granite-coarse-grained-380.jpg',
