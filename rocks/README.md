@@ -25,7 +25,7 @@ Currently only a few rocks have been added. Those which exist are marked with (I
 
 - granite (included)
 - andesite
-- basalt
+- basalt (included)
 - dacite
 - dolerite
 - gabbro
