@@ -14,4 +14,5 @@ public interface GodService {
 
     God updateGod(God god);
 
+    void deleteGod(Integer id);
 }

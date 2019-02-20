@@ -33,4 +33,11 @@ public class GodController {
     public @ResponseBody God updateGod(@RequestBody God god){
         return godService.updateGod(god);
     }
+
+
+    @RequestMapping(value = "/api/v1/gods/{id}", method = RequestMethod.DELETE)
+    public @ResponseBody Object deleteGod(@PathVariable(value = "id") Integer id){
+        godService.deleteGod(id);
+        return null;
+    }
 }

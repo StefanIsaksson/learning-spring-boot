@@ -64,4 +64,10 @@ public class GodControllerIT {
         System.out.println("Description BEFORE update : " + descriptionBeforeUpdate);
         System.out.println("Description AFTER update : " + updatedGod.getDescription());
     }
+
+    @Test(timeout = 5000)
+    public void testDeleteGod() {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.delete("http://localhost:8080/api/v1/gods/3");
+    }
 }

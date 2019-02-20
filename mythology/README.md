@@ -16,6 +16,7 @@ The focus is on learning Spring JDBC.
 |api/v1/gods/**id**                  |GET   |Retrieve god by id            |
 |api/v1/gods                         |POST  |Create new god                |
 |api/v1/gods/**id**                  |PUT   |Replace existing god by id    |
+|api/v1/gods/**id**                  |DELETE|Delete god by id              |
 
 ## Prerequisite
 mySQL installed and running locally on port 3306.

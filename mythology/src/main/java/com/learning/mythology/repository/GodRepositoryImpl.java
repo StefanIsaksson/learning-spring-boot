@@ -39,4 +39,9 @@ public class GodRepositoryImpl implements GodRepository {
         return god;
     }
 
+    @Override
+    public void deleteGod(Integer id) {
+        jdbcTemplate.update("delete from gods where id = ?", id);
+    }
+
 }

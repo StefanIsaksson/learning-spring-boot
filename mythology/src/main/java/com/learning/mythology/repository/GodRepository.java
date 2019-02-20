@@ -13,4 +13,6 @@ public interface GodRepository {
     God getGod(Integer id);
 
     God updateGod(God god);
+
+    void deleteGod(Integer id);
 }

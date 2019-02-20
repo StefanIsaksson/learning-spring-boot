@@ -32,4 +32,9 @@ public class GodServiceImpl implements GodService{
     public God updateGod(God god) {
         return godRepository.updateGod(god);
     }
+
+    @Override
+    public void deleteGod(Integer id) {
+        godRepository.deleteGod(id);
+    }
 }
