@@ -22,4 +22,14 @@ public class GodServiceImpl implements GodService{
     public List<God> getGods() {
         return godRepository.getGods();
     }
+
+    @Override
+    public God getGod(Integer id) {
+        return godRepository.getGod(id);
+    }
+
+    @Override
+    public God updateGod(God god) {
+        return godRepository.updateGod(god);
+    }
 }

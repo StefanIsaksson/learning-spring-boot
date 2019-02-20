@@ -26,4 +26,17 @@ public class GodRepositoryImpl implements GodRepository {
         return gods;
     }
 
+    @Override
+    public God getGod(Integer id) {
+        God god = jdbcTemplate.queryForObject("select * from gods where id = ?", new GodRowMapper(), id);
+        return god;
+    }
+
+    @Override
+    public God updateGod(God god) {
+        jdbcTemplate.update("update gods set name = ?, description = ? where id = ?",
+                god.getName(), god.getDescription(), god.getId());
+        return god;
+    }
+
 }

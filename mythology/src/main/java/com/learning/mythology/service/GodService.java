@@ -10,4 +10,8 @@ public interface GodService {
 
     List<God> getGods();
 
+    God getGod(Integer id);
+
+    God updateGod(God god);
+
 }

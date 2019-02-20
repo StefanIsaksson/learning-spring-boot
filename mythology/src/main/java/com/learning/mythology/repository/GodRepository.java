@@ -9,4 +9,8 @@ public interface GodRepository {
     List<God> getGods();
 
     God createGod(God god);
+
+    God getGod(Integer id);
+
+    God updateGod(God god);
 }
