@@ -11,7 +11,7 @@
 |Service                             |Type  |Description                   |
 |------------------------------------|------|-------------------------------
 |api/v1/countries                    |GET   |List all countries            |
-|api/v1/countries/**id**             |GET   |Retrive country by id         |
+|api/v1/countries/**id**             |GET   |Retrieve country by id        |
 |api/v1/countries                    |POST  |Create new country            |
 
 # Install
