@@ -19,7 +19,7 @@ public class InvoiceSenderImpl implements InvoiceSender {
 
     @Override
     public void sendInvoice(Invoice invoice) {
-        jmsTemplate.convertAndSend(MessagingConfiguration.INVOICE_QUEUE_NAME, invoice);
-        logger.info(String.format("Message sent to queue [%s] with data: \n %s", MessagingConfiguration.INVOICE_QUEUE_NAME, invoice));
+        jmsTemplate.convertAndSend(MessagingConfiguration.NEW_INVOICE_QUEUE_NAME, invoice);
+        logger.info(String.format("Message sent to queue [%s] with data: \n %s", MessagingConfiguration.NEW_INVOICE_QUEUE_NAME, invoice));
     }
 }

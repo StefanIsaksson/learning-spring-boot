@@ -16,6 +16,7 @@ public class MessagingConfiguration {
     public static final String NEW_INVOICE_QUEUE_NAME = "new_invoices";
     public static final String GENERATEDS_INVOICE_QUEUE_NAME = "generated_invoices";
 
+
     @Bean
     public JmsListenerContainerFactory<?> myFactory(ConnectionFactory connectionFactory,
                                                     DefaultJmsListenerContainerFactoryConfigurer configurer) {
