@@ -6,11 +6,15 @@ The focus is on learning ActiveMQ.
 - **[Spring MVC](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html)**, a java web application framework
 - **[Spring JMS](https://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/jms.html)**, simplifies the use of the JMS API (like Spring JDBC does for JDBC API).
 - **[ActiveMQ](http://activemq.apache.org/)**, a message broker and a Java Message Service (JMS) client.
+- **[Spring JDBC](https://spring.io/projects/spring-data-jdbc)**, (a part of Spring Data) used to simplify implementing data access layer.
+- **[SQLite](https://www.sqlite.org/index.html)**, a SQL database
+- **[Flyway](https://flywaydb.org/)**, version control for database migrations.
 
 
 ## API
 |Service                             |Type  |Description                   |
 |------------------------------------|------|-------------------------------
+|api/v1/invoice                      |GET   |Lists all invoices            |
 |api/v1/invoice                      |POST  |Create new invoice            |
 
 ### Example Data:

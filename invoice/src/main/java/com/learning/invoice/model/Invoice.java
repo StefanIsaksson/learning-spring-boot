@@ -7,16 +7,25 @@ import java.math.BigDecimal;
 
 public class Invoice {
 
+    String id;
     String invoiceNumber;
     String clientName;
     String clientAdress;
     BigDecimal invoiceTotal;
     String invoiceDate;
     String dueDate;
+    String pdfFileName;
 
     public Invoice() {
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getInvoiceNumber() {
         return invoiceNumber;
@@ -64,6 +73,14 @@ public class Invoice {
 
     public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
+    }
+
+    public String getPdfFileName() {
+        return pdfFileName;
+    }
+
+    public void setPdfFileName(String pdfFileName) {
+        this.pdfFileName = pdfFileName;
     }
 
     @Override
