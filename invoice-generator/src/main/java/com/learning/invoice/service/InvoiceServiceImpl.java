@@ -5,6 +5,7 @@ import com.learning.invoice.messaging.GeneratedInvoiceSender;
 import com.learning.invoice.model.GeneratedInvoice;
 import com.learning.invoice.model.Invoice;
 import com.learning.invoice.pdf.PDFGenerator;
+import com.learning.invoice.repository.InvoiceRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,26 +15,32 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
 public class InvoiceServiceImpl implements InvoiceService {
 
     Logger logger = LoggerFactory.getLogger(InvoiceServiceImpl.class);
+
     @Autowired
     GeneratedInvoiceSender generatedInvoiceSender;
+
     @Autowired
     PDFGenerator PDFGenerator;
-    private Map<String, byte[]> PDFdocuments = new HashMap<>();
+
+    @Autowired
+    InvoiceRepository invoiceRepository;
 
     @Override
     public void createInvoice(Invoice invoice) {
         try {
-            String timestamp = new SimpleDateFormat("yyyymmddhhmmss").format(new Date());
+            String timestamp = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date());
             String fileName = String.format("%s_%s.pdf", invoice.getInvoiceNumber(), timestamp);
             byte[] pdf = PDFGenerator.generatePDF(fileName, invoice);
-            PDFdocuments.put(fileName, pdf);
+            invoiceRepository.createPDF(fileName, pdf);
             logger.info(String.format("Generated PDF with file name: %s", fileName));
+
             generatedInvoiceSender.sendGeneratedInvoice(new GeneratedInvoice(invoice.getInvoiceNumber(), fileName));
         } catch (IOException e) {
             logger.error("Error creating Invoice", e);
@@ -42,11 +49,14 @@ public class InvoiceServiceImpl implements InvoiceService {
         }
     }
 
-    public Map<String, byte[]> getPDFdocuments() {
-        return PDFdocuments;
+    @Override
+    public List<String> getInvoices() {
+        return invoiceRepository.getFileNames();
     }
 
-    public void setPDFdocuments(Map<String, byte[]> PDFdocuments) {
-        this.PDFdocuments = PDFdocuments;
+    @Override
+    public byte[] getPDF(String pdfFileName) {
+        return invoiceRepository.getPDF(pdfFileName);
     }
+
 }

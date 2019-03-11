@@ -2,11 +2,13 @@ package com.learning.invoice.service;
 
 import com.learning.invoice.model.Invoice;
 
-import java.util.Map;
+import java.util.List;
 
 public interface InvoiceService {
 
     void createInvoice(Invoice invoice);
 
-    Map<String, byte[]> getPDFdocuments();
+    List<String> getInvoices();
+
+    byte[] getPDF(String pdfFileName);
 }
