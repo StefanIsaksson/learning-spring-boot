@@ -84,7 +84,7 @@ For changes to take effect they need to be commited in git.
 ### Run:
 `ProductServiceApplication.java`
    
-(**Prerequisite:** Running dinoz-gateway)
+(**Prerequisite:** Running dinoz-service-discovery)
 
 ## API
 
@@ -103,7 +103,7 @@ For changes to take effect they need to be commited in git.
 ### Run:
 `OrderServiceApplication.java`
    
-(**Prerequisite:** Running dinoz-gateway)
+(**Prerequisite:** Running dinoz-service-discovery)
 
 ## API
 
@@ -117,3 +117,22 @@ For changes to take effect they need to be commited in git.
 
 *App runs default on http://localhost:8084 (configured in dinoz-configuration)*
 
+# dinoz-shop-webapp
+
+A simple Web App.
+
+### Uses:
+- **[Vaadin](https://vaadin.com/)**, a web framework that allows creating HTML5 web user interfaces using the Java language.
+
+## API
+
+|Service                             |Type  |Description                                |
+|------------------------------------|------|--------------------------------------------
+|/                                   |GET   |HTML Page calling Dinoz gateway API        |
+
+*App runs default on http://localhost:80 (configured in dinoz-configuration)*
+
+### Run:
+`ShopApplication.java`
+
+(**Prerequisite:** Running dinoz-gateway)

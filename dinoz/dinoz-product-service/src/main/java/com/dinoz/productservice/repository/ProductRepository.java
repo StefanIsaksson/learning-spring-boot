@@ -10,9 +10,9 @@ public interface ProductRepository {
 
     Product createProduct(Product product);
 
-    Product getProduct(Long id);
+    Product getProduct(String id);
 
     Product updateProduct(Product product);
 
-    void deleteProduct(Long id);
+    void deleteProduct(String id);
 }

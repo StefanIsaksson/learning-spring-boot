@@ -3,16 +3,17 @@ package com.dinoz.productservice.repository;
 import com.dinoz.productservice.model.Product;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Repository
 public class ProductRepositoryImpl implements ProductRepository{
 
-    private List<Product> products = Arrays.asList(
-            new Product(1L, "T-Rex", "King of Dinsoaurs", 500L),
-            new Product(2L, "Stegosaur", "Herbivour", 200L)
-    );
+    private List<Product> products = new ArrayList<>(Arrays.asList(
+            new Product("1", "T-Rex", "King of Dinsoaurs", 500D),
+            new Product("2", "Dracorex", "Herbivour", 200D)
+    ));
 
     @Override
     public List<Product> getProducts() {
@@ -26,22 +27,22 @@ public class ProductRepositoryImpl implements ProductRepository{
     }
 
     @Override
-    public Product getProduct(Long id) {
+    public Product getProduct(String id) {
         return products.stream().filter(b -> b.getId().equals(id)).findFirst().orElse(null);
     }
 
     @Override
     public Product updateProduct(Product product) {
         Product existingProduct = getProduct(product.getId());
-        if(products.remove(existingProduct)){
-            products.add(product);
-            return product;
+        if(existingProduct != null) {
+            products.remove(existingProduct);
         }
-        return null;
+        products.add(product);
+        return product;
     }
 
     @Override
-    public void deleteProduct(Long id) {
+    public void deleteProduct(String id) {
         Product existingProduct = getProduct(id);
         products.remove(existingProduct);
     }

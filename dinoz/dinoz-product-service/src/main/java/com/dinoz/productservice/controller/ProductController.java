@@ -3,10 +3,7 @@ package com.dinoz.productservice.controller;
 import com.dinoz.productservice.model.Product;
 import com.dinoz.productservice.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,9 +19,14 @@ public class ProductController {
         return productService.getProducts();
     }
 
-    @GetMapping("/{productId}")
-    public Product findBook(@PathVariable Long productId) {
-        return productService.getProduct(productId);
+    @GetMapping("/{id}")
+    public Product findBook(@PathVariable String id) {
+        return productService.getProduct(id);
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.PUT)
+    public @ResponseBody Product updateProduct(@RequestBody Product product){
+        return productService.updateProduct(product);
     }
 
 }
