@@ -26,7 +26,13 @@ public class ProductController {
 
     @RequestMapping(value = "", method = RequestMethod.PUT)
     public @ResponseBody Product updateProduct(@RequestBody Product product){
-        return productService.updateProduct(product);
+        return productService.saveProduct(product);
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public @ResponseBody Object deleteGod(@PathVariable(value = "id") String id){
+        productService.deleteProduct(id);
+        return null;
     }
 
 }

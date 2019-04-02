@@ -62,14 +62,10 @@ For changes to take effect they need to be commited in git.
 |------------------------------------|------|------------------------------------
 |product-service/products            |GET   |List all products                  |
 |product-service/products/**id**     |GET   |Retrieve product  by id            |
-|product-service/products            |POST  |Create new product                 |
-|product-service/products/**id**     |PUT   |Replace existing product by id     |
+|product-service/products/           |PUT   |Create or replace existing product |
 |product-service/products/**id**     |DELETE|Delete products by id              |
 |order-service/orders                |GET   |List all orders                    |
 |order-service/orders/**id**         |GET   |Retrieve order by id               |
-|order-service/orders                |POST  |Create new order                   |
-|order-service/orders/**id**         |PUT   |Replace existing order by id       |
-|order-service/orders/**id**         |DELETE|Delete order by id                 |
 
 *App runs default on http://localhost:8080 (configured in dinoz-configuration)*
 
@@ -86,14 +82,17 @@ For changes to take effect they need to be commited in git.
    
 (**Prerequisite:** Running dinoz-service-discovery)
 
+### Uses:
+- **[Spring JDBC](https://spring.io/projects/spring-data-jdbc)**, (a part of Spring Data) used to simplify implementing data access layer.
+- **[H2](http://www.h2database.com/html/main.html)**, a Java SQL database
+
 ## API
 
 |Service             |Type  |Description                        |
 |--------------------|------|------------------------------------
 |products            |GET   |List all products                  |
 |products/**id**     |GET   |Retrieve products by id            |
-|products            |POST  |Create new products                |
-|products/**id**     |PUT   |Replace existing products by id    |
+|products/           |PUT   |Create or replace existing product |
 |products/**id**     |DELETE|Delete products by id              |
 
 *App runs default on http://localhost:8083 (configured in dinoz-configuration)*
@@ -111,9 +110,6 @@ For changes to take effect they need to be commited in git.
 |--------------------|------|------------------------------------
 |orders              |GET   |List all orders                    |
 |orders/**id**       |GET   |Retrieve order by id               |
-|orders              |POST  |Create new order                   |
-|orders/**id**       |PUT   |Replace existing order by id       |
-|orders/**id**       |DELETE|Delete order by id                 |
 
 *App runs default on http://localhost:8084 (configured in dinoz-configuration)*
 

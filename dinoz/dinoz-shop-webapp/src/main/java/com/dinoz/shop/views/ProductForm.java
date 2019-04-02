@@ -7,6 +7,7 @@ import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.NumberField;
+import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
 
@@ -14,7 +15,7 @@ public class ProductForm extends FormLayout {
 
     private TextField  id = new TextField("Id");
     private TextField name = new TextField("Name");
-    private TextField description = new TextField("Description");
+    private TextArea description = new TextArea("Description");
     private NumberField price = new NumberField("Price");
 
     private Button save = new Button("Save");
