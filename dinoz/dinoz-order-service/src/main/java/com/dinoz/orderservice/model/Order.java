@@ -3,25 +3,17 @@ package com.dinoz.orderservice.model;
 import java.util.List;
 
 public class Order {
-    private Long id;
+    private String id;
     private String customerId;
-    private String shippingAdress;
+    private String shippingAddress;
     private OrderStatus orderStatus;
     private List<Product> products;
 
-    public Order(Long id, String customerId, String shippingAdress, OrderStatus orderStatus, List<Product> products) {
-        this.id = id;
-        this.customerId = customerId;
-        this.shippingAdress = shippingAdress;
-        this.orderStatus = orderStatus;
-        this.products = products;
-    }
-
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -33,12 +25,12 @@ public class Order {
         this.customerId = customerId;
     }
 
-    public String getShippingAdress() {
-        return shippingAdress;
+    public String getShippingAddress() {
+        return shippingAddress;
     }
 
-    public void setShippingAdress(String shippingAdress) {
-        this.shippingAdress = shippingAdress;
+    public void setShippingAddress(String shippingAddress) {
+        this.shippingAddress = shippingAddress;
     }
 
     public OrderStatus getOrderStatus() {

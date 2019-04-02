@@ -25,7 +25,7 @@ public class OrderServiceImpl implements OrderService
     }
 
     @Override
-    public Order getOrder(Long id) {
+    public Order getOrder(String id) {
         return orderRepository.getOrder(id);
     }
 
@@ -35,7 +35,7 @@ public class OrderServiceImpl implements OrderService
     }
 
     @Override
-    public void deleteOrder(Long id) {
+    public void deleteOrder(String id) {
         orderRepository.deleteOrder(id);
     }
 }

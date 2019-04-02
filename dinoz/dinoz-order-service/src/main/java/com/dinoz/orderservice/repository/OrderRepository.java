@@ -10,9 +10,9 @@ public interface OrderRepository {
 
     Order createOrder(Order order);
 
-    Order getOrder(Long id);
+    Order getOrder(String id);
 
     Order updateOrder(Order order);
 
-    void deleteOrder(Long id);
+    void deleteOrder(String id);
 }

@@ -1,27 +1,33 @@
 package com.dinoz.orderservice.model;
 
+import java.math.BigDecimal;
+
 public class Product {
-    private Long id;
-    private Long price;
+    private String id;
+    private String productName;
+    private BigDecimal price;
 
-    public Product(Long id, Long price) {
-        this.id = id;
-        this.price = price;
-    }
-
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Long getPrice() {
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 }

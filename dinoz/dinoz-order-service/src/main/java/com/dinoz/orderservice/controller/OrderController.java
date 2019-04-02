@@ -22,9 +22,9 @@ public class OrderController {
         return orderService.getOrders();
     }
 
-    @GetMapping("/{orderId}")
-    public Order findBook(@PathVariable Long orderId) {
-        return orderService.getOrder(orderId);
+    @GetMapping("/{id}")
+    public Order findBook(@PathVariable String id) {
+        return orderService.getOrder(id);
     }
 
 }

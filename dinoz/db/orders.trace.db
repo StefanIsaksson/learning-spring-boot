@@ -1,0 +1,844 @@
+2019-04-02 14:47:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE ORDER[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table order if exists [42001-197]
+2019-04-02 14:47:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT NOT NULL, CUSTOMER_ID VARCHAR(255), ORDER_STATUS INTEGER, SHIPPING_ADRESS VARCHAR(255), PRIMARY KEY (ID)) "; expected "identifier"; SQL statement:
+create table order (id bigint not null, customer_id varchar(255), order_status integer, shipping_adress varchar(255), primary key (id)) [42001-197]
+2019-04-02 14:47:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ALTER TABLE PRODUCT ADD CONSTRAINT FK2LKJHXMY6NITOORP5HM5G9K9N FOREIGN KEY (ID) REFERENCES ORDER[*] "; expected "identifier"; SQL statement:
+alter table product add constraint FK2lkjhxmy6nitoorp5hm5g9k9n foreign key (id) references order [42001-197]
+2019-04-02 14:47:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM PRODUCT PRICE ID[*] PRODUCT"; SQL statement:
+SELECT * FROM PRODUCT PRICE ID PRODUCT [42000-197]
+2019-04-02 14:48:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE ORDER[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table order if exists [42001-197]
+2019-04-02 14:48:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE ORDER[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table order if exists [42001-197]
+2019-04-02 14:48:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT NOT NULL, CUSTOMER_ID VARCHAR(255), ORDER_STATUS INTEGER, SHIPPING_ADRESS VARCHAR(255), PRIMARY KEY (ID)) "; expected "identifier"; SQL statement:
+create table order (id bigint not null, customer_id varchar(255), order_status integer, shipping_adress varchar(255), primary key (id)) [42001-197]
+2019-04-02 14:48:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ALTER TABLE PRODUCT ADD CONSTRAINT FK2LKJHXMY6NITOORP5HM5G9K9N FOREIGN KEY (ID) REFERENCES ORDER[*] "; expected "identifier"; SQL statement:
+alter table product add constraint FK2lkjhxmy6nitoorp5hm5g9k9n foreign key (id) references order [42001-197]
+2019-04-02 14:49:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE ORDER[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table order if exists [42001-197]
+2019-04-02 14:49:26 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:49:26 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:49:26 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:49:27 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:49:28 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:51:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE ORDER[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table order if exists [42001-197]
+2019-04-02 14:51:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT NOT NULL, CUSTOMER_ID VARCHAR(255), ORDER_STATUS INTEGER, SHIPPING_ADRESS VARCHAR(255), PRIMARY KEY (ID)) "; expected "identifier"; SQL statement:
+create table order (id bigint not null, customer_id varchar(255), order_status integer, shipping_adress varchar(255), primary key (id)) [42001-197]
+2019-04-02 14:52:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ORDER (ID BIGINT NOT NULL, CUSTOMER_ID VARCHAR(255), ORDER_STATUS INTEGER, SHIPPING_ADRESS VARCHAR(255), PRIMARY KEY (ID))
+
+
+ ""; expected ""identifier[*]""; SQL statement:
+create table order (id bigint not null, customer_id varchar(255), order_status integer, shipping_adress varchar(255), primary key (id))"; SQL statement:
+CREATE TABLE ORDER (ID BIGINT NOT NULL, CUSTOMER_ID VARCHAR(255), ORDER_STATUS INTEGER, SHIPPING_ADRESS VARCHAR(255), PRIMARY KEY (ID))
+
+
+ "; expected "identifier"; SQL statement:
+create table order (id bigint not null, customer_id varchar(255), order_status integer, shipping_adress varchar(255), primary key (id)) [42000-197]
+2019-04-02 14:52:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT NOT NULL, CUSTOMER_ID VARCHAR(255), ORDER_STATUS INTEGER, SHIPPING_ADRESS VARCHAR(255), PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+CREATE TABLE ORDER (ID BIGINT NOT NULL, CUSTOMER_ID VARCHAR(255), ORDER_STATUS INTEGER, SHIPPING_ADRESS VARCHAR(255), PRIMARY KEY (ID)) [42001-197]
+2019-04-02 14:52:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement """; expected ""identifier[*]""; SQL statement:
+create table order (id bigint not null, customer_id varchar(255), order_status integer, shipping_adress varchar(255), primary key (id))"; SQL statement:
+"; expected "identifier"; SQL statement:
+create table order (id bigint not null, customer_id varchar(255), order_status integer, shipping_adress varchar(255), primary key (id)) [42000-197]
+2019-04-02 14:55:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE ORDER[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table order if exists [42001-197]
+2019-04-02 14:55:45 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:55:45 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:55:46 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:55:46 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:55:47 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 14:56:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE ORDER[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table order if exists [42001-197]
+2019-04-02 14:56:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID VARCHAR(255) GENERATED BY DEFAULT AS IDENTITY, CUSTOMER_ID VARCHAR(255), ORDER_STATUS INTEGER, SHIPPING_ADRESS VARCHAR(255), PRIMARY KEY (ID)) "; expected "identifier"; SQL statement:
+create table order (id varchar(255) generated by default as identity, customer_id varchar(255), order_status integer, shipping_adress varchar(255), primary key (id)) [42001-197]
+2019-04-02 15:12:02 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 15:12:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DROP TABLE ORDER[*] IF EXISTS "; expected "identifier"; SQL statement:
+drop table order if exists [42001-197]
+2019-04-02 15:12:03 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 15:12:03 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 15:12:04 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
+2019-04-02 15:12:04 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2506)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:383)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:364)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2934)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2538)
+	at org.h2.engine.Database.open(Database.java:709)
+	at org.h2.engine.Database.openDatabase(Database.java:286)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:66)
+	at org.h2.engine.Engine.openSession(Engine.java:179)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:157)
+	at org.h2.engine.Engine.createSession(Engine.java:140)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:351)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:706)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:692)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]" [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 34 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Snigel/Documents/Study/Git/learning-spring-boot/dinoz/db/orders.mv.db [1.4.197/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.FileStore.open(FileStore.java:168)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:350)
+	... 28 more
+Caused by: java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1113)
+	at org.h2.store.fs.FileNio.tryLock(FilePathNio.java:121)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.h2.mvstore.FileStore.open(FileStore.java:165)
+	... 29 more
