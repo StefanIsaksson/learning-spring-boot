@@ -20,7 +20,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public Product findBook(@PathVariable String id) {
+    public Product findProduct(@PathVariable String id) {
         return productService.getProduct(id);
     }
 
@@ -30,7 +30,7 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public @ResponseBody Object deleteGod(@PathVariable(value = "id") String id){
+    public @ResponseBody Object deleteProduct(@PathVariable(value = "id") String id){
         productService.deleteProduct(id);
         return null;
     }
