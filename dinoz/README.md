@@ -66,6 +66,10 @@ For changes to take effect they need to be commited in git.
 |product-service/products/**id**     |DELETE|Delete products by id              |
 |order-service/orders                |GET   |List all orders                    |
 |order-service/orders/**id**         |GET   |Retrieve order by id               |
+|customer-service/customer           |GET   |List all customers                 |
+|customer-service/customer/**id**    |GET   |Retrieve customer  by id           |
+|customer-service/customer/          |PUT   |Create or replace existing customer|
+|customer-service/customer/**id**    |DELETE|Delete customer by id              |
 
 *App runs default on http://localhost:8080 (configured in dinoz-configuration)*
 
@@ -112,6 +116,24 @@ For changes to take effect they need to be commited in git.
 |orders/**id**       |GET   |Retrieve order by id               |
 
 *App runs default on http://localhost:8084 (configured in dinoz-configuration)*
+
+# dinoz-customer-service
+
+### Run:
+`CustomerServiceApplication.java`
+   
+(**Prerequisite:** Running dinoz-service-discovery)
+
+## API
+
+|Service             |Type  |Description                        |
+|--------------------|------|------------------------------------
+|customers           |GET   |List all customers                 |
+|customers/**id**    |GET   |Retrieve customers by id           |
+|customers/          |PUT   |Create or replace existing customer|
+|customers/**id**    |DELETE|Delete customer by id              |
+
+*App runs default on http://localhost:8085 (configured in dinoz-configuration)*
 
 # dinoz-shop-webapp
 

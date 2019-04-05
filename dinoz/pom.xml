@@ -15,6 +15,7 @@
         <module>dinoz-product-service</module>
         <module>dinoz-order-service</module>
         <module>dinoz-shop-webapp</module>
+        <module>dinoz-customer-service</module>
     </modules>
 
 </project>
