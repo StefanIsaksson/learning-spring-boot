@@ -21,8 +21,9 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
-    public List<Customer> getCustomers(String name) {
-        List<Customer> customers = jdbcTemplate.query("select top 5 * from customers where LOWER(name) like ? order by RAND()", new CustomerRowMapper(), "%" + name.toLowerCase() + "%");
+    public List<Customer> getCustomers(String searchQuery) {
+        String lowerCaseQuery = "%" + searchQuery.toLowerCase() + "%";
+        List<Customer> customers = jdbcTemplate.query("select top 5 * from customers where LOWER(name) like ? or LOWER(address) like ? or customerid like ? order by RAND()", new CustomerRowMapper(), lowerCaseQuery, lowerCaseQuery, lowerCaseQuery);
         return customers;
     }
 

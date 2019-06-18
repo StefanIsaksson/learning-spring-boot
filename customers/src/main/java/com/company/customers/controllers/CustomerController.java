@@ -18,11 +18,11 @@ public class CustomerController {
     CustomerService customerService;
 
     @GetMapping("")
-    public List<Customer> getCustomers(@RequestParam(required = false) String name) {
-        if(name == null || name.isEmpty()){
+    public List<Customer> getCustomers(@RequestParam(required = false) String searchQuery) {
+        if(searchQuery == null || searchQuery.isEmpty()){
             return customerService.getCustomers();
         } else {
-            return customerService.getCustomers(name);
+            return customerService.getCustomers(searchQuery);
         }
     }
 }

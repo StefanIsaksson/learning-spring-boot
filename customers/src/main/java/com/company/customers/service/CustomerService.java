@@ -8,6 +8,6 @@ public interface CustomerService {
 
     List<Customer> getCustomers();
 
-    List<Customer> getCustomers(String name);
+    List<Customer> getCustomers(String searchQuery);
 
 }

@@ -20,8 +20,8 @@ public class CustomerServiceImpl implements CustomerService
     }
 
     @Override
-    public List<Customer> getCustomers(String name) {
-        return customerRepository.getCustomers(name);
+    public List<Customer> getCustomers(String searchQuery) {
+        return customerRepository.getCustomers(searchQuery);
     }
 
 }
