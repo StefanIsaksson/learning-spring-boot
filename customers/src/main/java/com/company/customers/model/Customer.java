@@ -13,6 +13,7 @@ public class Customer {
     private String maritalStatus;
     private String address;
     private Date lastUpdated;
+    private String gender;
 
     public Customer() {
     }
@@ -87,5 +88,13 @@ public class Customer {
 
     public void setLastUpdated(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
