@@ -18,7 +18,7 @@ public class CustomerController {
     CustomerService customerService;
 
     @GetMapping("")
-    public List<Customer> getCustomers(@RequestParam("name") String name) {
+    public List<Customer> getCustomers(@RequestParam(required = false) String name) {
         if(name == null || name.isEmpty()){
             return customerService.getCustomers();
         } else {

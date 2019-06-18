@@ -1,6 +1,7 @@
 package com.company.customers.model;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 public class Customer {
     private Integer id;
@@ -9,6 +10,9 @@ public class Customer {
     private BigDecimal score;
     private Integer income;
     private String partnerName;
+    private String maritalStatus;
+    private String address;
+    private Date lastUpdated;
 
     public Customer() {
     }
@@ -59,5 +63,29 @@ public class Customer {
 
     public void setPartnerName(String partnerName) {
         this.partnerName = partnerName;
+    }
+
+    public String getMaritalStatus() {
+        return maritalStatus;
+    }
+
+    public void setMaritalStatus(String maritalStatus) {
+        this.maritalStatus = maritalStatus;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Date getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(Date lastUpdated) {
+        this.lastUpdated = lastUpdated;
     }
 }
