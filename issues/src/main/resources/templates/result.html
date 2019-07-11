@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register Issues</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Result</h1>
+    <h3>Project</h3>
+    <p th:text="${issue.project}"/>
+    <h3>Description</h3>
+    <p th:text="${issue.description}"/>
+    <h3>Severity</h3>
+    <p th:text="${issue.severity}"/>
+    <a href="/">Submit another issue</a>
+</div>
+</body>
+</html>
